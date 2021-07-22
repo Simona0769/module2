@@ -1,10 +1,6 @@
 {
-  "npmClient": "yarn",
-  "useWorkspaces": true,
-  "packages": ["packages/*"],
-  "command": {
-    "publish": {
-      "npmClient": "npm"
-    }
-  }
+  "packages": [
+    "packages/*"
+  ],
+  "version": "0.0.0"
 }
