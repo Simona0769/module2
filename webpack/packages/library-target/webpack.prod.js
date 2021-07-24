@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-var target = "system";
+var target = "var";
 
 module.exports = {
   mode: "production",
@@ -10,7 +10,7 @@ module.exports = {
     library: {
       name: "hello",
       type: target,
-      umdNamedDefine: true,
+      // umdNamedDefine: true,
     },
     // libraryTarget: target,
   },

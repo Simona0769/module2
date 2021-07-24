@@ -1,7 +1,65 @@
-hello(/******/ (() => { // webpackBootstrap
+define("hello", [], () => { return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./Movie.js":
+/*!******************!*\
+  !*** ./Movie.js ***!
+  \******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "movie": () => (/* binding */ movie)
+/* harmony export */ });
+// class Movie {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   print() {
+//     console.log(this.name);
+//   }
+
+//   getMovieName() {
+//     return this.name;
+//   }
+// }
+
+function movie() {
+  console.log("movie A");
+}
+
+
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
@@ -34,6 +92,8 @@ hello(/******/ (() => { // webpackBootstrap
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
 /*!******************!*\
   !*** ./entry.js ***!
   \******************/
@@ -41,26 +101,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// import Movie from "./Movie.js";
+/* harmony import */ var _Movie_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Movie.js */ "./Movie.js");
 
 function SetUp() {
-  // let movie = new Movie("寂静之地").print();
-  let movie = "寂静之地";
-
-  let div = document.createElement("div");
-  div.innerHTML = `电影：${movie}`;
-  document.body.appendChild(div);
+  return (0,_Movie_js__WEBPACK_IMPORTED_MODULE_0__.movie)();
 }
-
-function useless() {
-  console.log("tree-shaking please!");
-}
-
-// SetUp();
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SetUp);
+
+})();
 
 /******/ 	return __webpack_exports__;
 /******/ })()
-);
+;
+});;
 //# sourceMappingURL=main.js.map

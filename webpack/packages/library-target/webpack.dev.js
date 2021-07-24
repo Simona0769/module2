@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-var target = "jsonp";
+var target = "amd";
 
 module.exports = {
   mode: "development",
@@ -10,10 +10,13 @@ module.exports = {
     library: {
       name: "hello",
       type: target,
-      umdNamedDefine: true,
+      umdNamedDefine: false,
     },
     // libraryTarget: target,
   },
+  // experiments: {
+  //   outputModule: true,
+  // },
   devtool: "source-map",
   plugins: [
     new HtmlWebpackPlugin({
