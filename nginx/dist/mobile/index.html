@@ -8,15 +8,13 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">我就是一个移动端页面</div>
 
     <user-card
       image="https://semantic-ui.com/images/avatar2/large/kristy.png"
       name="User Name"
       email="yourmail@some-email.com"
     ></user-card>
-
-    <div id="shadowParent"></div>
 
     <template id="userCardTemplate">
       <style>
@@ -97,15 +95,6 @@
         }
       }
       window.customElements.define("user-card", UserCard);
-
-      let sd = document
-        .getElementById("shadowParent")
-        .attachShadow({ mode: "open" });
-
-      let child = document.createElement("div");
-      child.id = "schild";
-      child.innerHTML = "hahahhahaha";
-      sd.appendChild(child);
     </script>
   </body>
 </html>
